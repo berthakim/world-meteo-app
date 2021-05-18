@@ -1,0 +1,34 @@
+{% extends "weather/base.html" %}
+{% block weather_active %}active{% endblock %}
+{% block content %}
+
+<title>Map folium</title>
+  <!-- <h2>Responsive Two Column Layout</h2>
+  <p>Resize the browser window to see the responsive effect (the columns will stack on top of each other instead of floating next to each other, when the screen is less than 600px wide).</p> -->
+<!-- <div class="text">
+  <h2>Responsive Topnav Example</h2>
+  <p>Resize the browser window to see how it works.</p>
+</div> -->
+
+<div class="column col_left text">
+  {{ my_map|safe }}
+</div>
+
+  <p class="column col_right text">
+  Responsive Two Column Layout
+  Resize the browser window to see the responsive effect (the columns will stack on top of each other instead of floating next to each other, when the screen is less than 600px wide)
+  Responsive Two Column Layout
+  Resize the browser window to see the responsive effect (the columns will stack on top of each other instead of floating next to each other, when the screen is less than 600px wide)
+  Responsive Two Column Layout
+  Resize the browser window to see the responsive effect (the columns will stack on top of each other instead of floating next to each other, when the screen is less than 600px wide)
+  Responsive Two Column Layout
+  Resize the browser window to see the responsive effect (the columns will stack on top of each other instead of floating next to each other, when the screen is less than 600px wide)
+  Responsive Two Column Layout
+  Resize the browser window to see the responsive effect (the columns will stack on top of each other instead of floating next to each other, when the screen is less than 600px wide)
+  Responsive Two Column Layout
+  Resize the browser window to see the responsive effect (the columns will stack on top of each other instead of floating next to each other, when the screen is less than 600px wide)</p>
+</p>
+
+{% endblock content %}
+
+<!-- header image source: https://www.codingwithricky.com/2019/08/28/easy-django-plotly/ -->
