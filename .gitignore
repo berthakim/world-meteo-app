@@ -137,3 +137,5 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# Django's Secret Key in settings.py
+config.py
