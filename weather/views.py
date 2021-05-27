@@ -4,17 +4,14 @@ from folium.plugins import Search
 import json
 from requests import get
 import html
+import config
 
-# weather from OpenWeatherMap api
-api_key = "969bd7bdde2aa8690b83ebfa2b4056cb"
-urls = [f'http://api.openweathermap.org/data/2.5/weather?q=London&units=metric&appid={api_key}',
-        f'http://api.openweathermap.org/data/2.5/weather?q=Moscow&units=metric&appid={api_key}',
-        f'http://api.openweathermap.org/data/2.5/weather?q=Paris&units=metric&appid={api_key}',
-        f'http://api.openweathermap.org/data/2.5/weather?q=New York&units=metric&appid={api_key}',
-        f'http://api.openweathermap.org/data/2.5/weather?q=Tokyo&units=metric&appid={api_key}'
-]
 
 cities = ['London', 'Moscow', 'Paris', 'New York', 'Tokyo']
+
+url_base = "http://api.openweathermap.org/data/2.5/weather?q="
+urls = [f'{url_base}{city}&units=metric&appid={config.api_key}' for city in cities]
+
 lon_lst, lat_lst, desc_lst, temper_lst = [], [], [], []
 for url in urls:
     stations = get(url).json()
